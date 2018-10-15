@@ -23,3 +23,13 @@ class Solution:
             return -1
         else:
             return dp[amount]
+
+
+def main():
+    coins = [1,5,10]
+    amount = 10
+    obj = Solution()
+    print(obj.coinChange(coins, amount))
+
+if __name__ == '__main__':
+    main()
