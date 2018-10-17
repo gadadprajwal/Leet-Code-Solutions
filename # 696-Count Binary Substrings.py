@@ -7,7 +7,7 @@ class Solution(object):
         group = [1]
         
         
-        for i in xrange(1,len(s)):
+        for i in range(1,len(s)):
             if s[i-1] != s[i]:
                 group.append(1)
             else:
@@ -16,12 +16,16 @@ class Solution(object):
         # Since the minimum requiremnent will only be fullfilled if we could manage to have exactly one 1 with corresponding 0.
         for i in range(0,len(group)-1):
             sum_ += min(group[i],group[i+1])
-            
+
+        print(sum_)    
         return sum_
-        
-        
-        """
-        :type s: str
-        :rtype: int
-        """
+
+def main():
+    obj = Solution()
+    s = "1010"
+    obj.countBinarySubstrings(s)
+    pass
+
+if __name__ == '__main__':
+    main()
         
